@@ -68,7 +68,7 @@ class Columns
 					}
 				}
 
-				return '<div class="' . implode(' ', $classes) . '">' . $content . '</div>';
+				return $content;
 
 			}
 

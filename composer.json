@@ -13,9 +13,8 @@
 		}
 	],
 	"support":{
-		"forum":"http://help.rocksolidthemes.com/discussions",
-		"issues":"https://github.com/madeyourday/contao-rocksolid-columns/issues",
-		"source":"https://github.com/madeyourday/contao-rocksolid-columns"
+		"issues":"https://github.com/biwerr/contao-rocksolid-columns/issues",
+		"source":"https://github.com/biwerr/contao-rocksolid-columns"
 	},
 	"require":{
 		"php":">=5.3"
@@ -29,7 +28,7 @@
 	"extra":{
 		"contao":{
 			"sources":{
-				"":"system/modules/rocksolid-columns"
+				"":"system/modules/rocksolid-columns-bs"
 			}
 		}
 	}
