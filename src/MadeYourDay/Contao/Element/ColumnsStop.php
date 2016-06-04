@@ -51,7 +51,7 @@ class ColumnsStop extends \ContentElement
 			}
 		}
 
-		return parent::generate() . $htmlSuffix;
+		return parent::generate();
 	}
 
 	/**

@@ -52,7 +52,7 @@ class ColumnsStart extends \ContentElement
 						}
 					}
 
-					$htmlPrefix .= '<div class="' . implode(' ', $classes) . '">';
+					$htmlPrefix .= '<div class="">';
 
 				}
 
@@ -67,7 +67,7 @@ class ColumnsStart extends \ContentElement
 			'config' => static::getColumnsConfiguration($this->arrData),
 		);
 
-		return $htmlPrefix . parent::generate();
+		return parent::generate();
 	}
 
 	/**

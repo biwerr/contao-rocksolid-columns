@@ -31,21 +31,12 @@ class ColumnStart extends \ContentElement
 			return parent::generate();
 		}
 
-		$classes = array('rs-column');
+
 		$parentKey = ($this->arrData['ptable'] ?: 'tl_article') . '__' . $this->arrData['pid'];
 
 		if (isset($GLOBALS['TL_RS_COLUMNS'][$parentKey]) && $GLOBALS['TL_RS_COLUMNS'][$parentKey]['active']) {
 
-			$GLOBALS['TL_RS_COLUMNS'][$parentKey]['active'] = false;
-			$GLOBALS['TL_RS_COLUMNS'][$parentKey]['count']++;
 
-			$count = $GLOBALS['TL_RS_COLUMNS'][$parentKey]['count'];
-			foreach ($GLOBALS['TL_RS_COLUMNS'][$parentKey]['config'] as $name => $media) {
-				$classes = array_merge($classes, $media[($count - 1) % count($media)]);
-				if ($count - 1 < count($media)) {
-					$classes[] = '-' . $name . '-first-row';
-				}
-			}
 
 		}
 		else {
@@ -55,7 +46,7 @@ class ColumnStart extends \ContentElement
 		if (!is_array($this->cssID)) {
 			$this->cssID = array('', '');
 		}
-		$this->arrData['cssID'][1] .= ' ' . implode(' ', $classes);
+		$this->arrData['cssID'][1] .= ' ';
 
 		return parent::generate();
 	}
